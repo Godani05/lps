@@ -59,7 +59,7 @@ const CustomNavigationMenu: React.FC<CustomNavigationMenuProps> = ({
               </button>
               {hoveredIndex === index && (
                 <div 
-                  className="absolute top-full left-0 mt-2 w-[250px] bg-white rounded-md shadow-lg z-50"
+                  className="absolute top-full left-0 mt-2 w-[210px] bg-white rounded-md shadow-lg z-50"
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
                 >

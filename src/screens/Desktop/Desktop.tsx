@@ -49,7 +49,7 @@ export const Desktop = (): JSX.Element => {
   const filieres = [
     {
       name: "Maintenance Industrielle",
-      image: "/mi.png",
+      image: "/mecano.jpg",
       description:
         "FORMER DES TECHNICIENS POUR ASSURER LA MAINTENANCE DES EQUIPEMENTS DE PRODUCTION INDUSTRIELLE",
     },

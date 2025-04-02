@@ -7,15 +7,7 @@ import {
 } from "lucide-react";
 import React from "react";
 import { Card, CardContent } from "../../components/ui/card";
-import  CustomNavigationMenu  from "../../components/ui/navigation-menu";
-/*import {
-   CustomNavigationMenu */
-  /* NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger ,
-} from "../../components/ui/navigation-menu";*/
+import CustomNavigationMenu from "../../components/ui/navigation-menu";
 
 export const Desktop = (): JSX.Element => {
   // Navigation menu items
@@ -25,10 +17,8 @@ export const Desktop = (): JSX.Element => {
       hasDropdown: true,
       submenu: ["A propos", "Mot du Proviseur", "Organisation", "Vie Scolaire"],
     },
-
     { label: "FORMATION", hasDropdown: false },
     { label: "ACTUALITES", hasDropdown: false },
-
     {
       label: "SERVICES",
       hasDropdown: true,
@@ -82,85 +72,83 @@ export const Desktop = (): JSX.Element => {
 
   return (
     <div className="bg-white flex flex-row justify-center w-full">
-      <div className="bg-white overflow-hidden w-[1440px] relative">
+      <div className="bg-white overflow-hidden w-full max-w-[1440px] relative">
         {/* Top Bar */}
-        <div className="w-full h-[80px] flex">
-          <div className="w-[456px] h-full bg-[#e2df73] flex items-center pl-[72px]">
-            <div className="flex items-center gap-4">
-              <span className="font-normal text-white text-sm">
+        <div className="w-full h-16 flex">
+          <div className="w-1/3 h-full bg-[#e2df73] flex items-center pl-8">
+            <div className="flex items-center gap-3">
+              <span className="font-normal text-white text-xs">
                 NOUS SUIVRE :
               </span>
-              <div className="w-[25px] h-[25px] bg-[#1a3a76] rounded-full flex items-center justify-center">
-                <FacebookIcon className="w-5 h-5 text-white" />
+              <div className="w-5 h-5 bg-[#1a3a76] rounded-full flex items-center justify-center">
+                <FacebookIcon className="w-3 h-3 text-white" />
               </div>
-              <div className="w-[25px] h-[25px] bg-[#1a3a76] rounded-full flex items-center justify-center">
-                <YoutubeIcon className="w-[18px] h-[18px] text-white" />
+              <div className="w-5 h-5 bg-[#1a3a76] rounded-full flex items-center justify-center">
+                <YoutubeIcon className="w-3 h-3 text-white" />
               </div>
             </div>
           </div>
-          <div className="flex-1 h-full bg-[#1a3a76] flex items-center justify-end pr-[100px]">
-            <div className="flex items-center gap-8 text-white">
-              <div className="flex items-center gap-2 ml-3">
-                <MapPinIcon className="w-6 h-6 text-[#e2df73]" />
-                <span className="font-normal text-xs w-[230px] ">
+          <div className="flex-1 h-full bg-[#1a3a76] flex items-center justify-end pr-8">
+            <div className="flex items-center gap-6 text-white text-xs">
+              <div className="flex items-center gap-2">
+                <MapPinIcon className="w-4 h-4 text-[#e2df73]" />
+                <span className="font-normal">
                   YOPOUGON BANCO II, CARREFOUR LYCEE
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <MailIcon className="w-6 h-6 text-[#e2df73]" />
-                <span className="font-normal text-xm">infoslps@gmail.com</span>
+                <MailIcon className="w-4 h-4 text-[#e2df73]" />
+                <span className="font-normal">infoslps@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <PhoneIcon className="w-6 h-6 text-[#e2df73]" />
-                <span className="font-normal text-xm w-[200px] ">
-                  0707010201 / 0100020405
-                </span>
+                <PhoneIcon className="w-4 h-4 text-[#e2df73]" />
+                <span className="font-normal">0707010201 / 0100020405</span>
               </div>
             </div>
           </div>
         </div>
+
         {/* Navigation */}
-<div className="w-full h-[px] mt-[10px] bg-white flex items-center justify-center">
-  <div className="flex items-center">
-    <img
-      className="w-[45px] h-[50px] mr-[373px] mb-4"
-      alt="Logo LPS"
-      src="/logo-lps-1.png"
-    />
-    <CustomNavigationMenu navItems={navItems} />
-  </div>
-</div>
+        <div className="w-full py-4 bg-white flex items-center justify-between px-8 shadow-sm">
+          <img
+            className="h-12 object-contain"
+            alt="Logo LPS"
+            src="/logo-lps-1.png"
+          />
+          <CustomNavigationMenu navItems={navItems} />
+        </div>
 
         {/* Hero Section */}
-        <div className="w-full h-[906px] relative">
+        <div className="w-full h-[600px] relative">
           <img
             className="w-full h-full object-cover"
             alt="Campus"
             src="/rectangle-5.png"
           />
-          <div className="absolute bottom-[45px] left-[73px] w-[248px] h-[80px] bg-[#1a3a76] flex items-center justify-center cursor-pointer hover:bg-[#e2df73]">
-            <button className="font-normal text-white text-2xl">
+          <div className="absolute bottom-8 left-8 px-6 py-3 bg-[#1a3a76] flex items-center justify-center cursor-pointer hover:bg-[#e2df73] transition-colors duration-300">
+            <button className="font-normal text-white text-lg">
               NOUS DECOUVRIR
             </button>
           </div>
         </div>
 
         {/* Qui Sommes Nous Section */}
-        <div className="w-full h-90 px-10 mt-[10px] border">
-          <div className="flex items-center ">
-            <img
-              className="w-[502px] h-[561px] object-cover rounded-lg mt-[50px] absolute"
-              alt="Campus"
-              src="/129145710-147881587116174-1814296285761364023-n.png"
-            />
-
-            <div className="flex-col mt-24 ml-[440px]">
-              <h2 className="font-semibold text-[#1a3a76] text-[65px] text-center mb-[20px] ml-[30px] ">
+        <div className="w-full py-16 px-8">
+          <div className="flex flex-row gap-8 items-center">
+            <div className="w-2/5">
+              <img
+                className="w-full rounded-lg object-cover h-96"
+                alt="Campus"
+                src="/129145710-147881587116174-1814296285761364023-n.png"
+              />
+            </div>
+            <div className="w-3/5">
+              <h2 className="font-semibold text-[#1a3a76] text-3xl mb-6">
                 QUI SOMMES NOUS ?
               </h2>
-              <Card className="bg-[#1a3a76] rounded-[54px] w-[770px] ">
-                <CardContent className="p-8">
-                  <p className="font-normal text-white text-[28px] leading-normal ml-[45px]">
+              <Card className="bg-[#1a3a76] rounded-lg">
+                <CardContent className="p-6">
+                  <p className="font-normal text-white text-base leading-relaxed">
                     Le Lycée Professionnel Sectoriel (LPS) de Yopougon est une
                     institution éducative située à Yopougon, une commune
                     d'Abidjan en Côte d'Ivoire.
@@ -181,25 +169,25 @@ export const Desktop = (): JSX.Element => {
         </div>
 
         {/* Notre Mission Section */}
-        <div className="w-full px-10 mt-[25px] border">
-          <h2 className="font-semibold text-[#1a3a76] text-[70px] mb-[20px]">
+        <div className="w-full py-12 px-8 bg-gray-50">
+          <h2 className="font-semibold text-[#1a3a76] text-3xl mb-6">
             NOTRE MISSION
           </h2>
-          <Card className="bg-[#1a3a76] rounded-[54px] w-full">
-            <CardContent className="p-8">
-              <p className="font-normal text-white text-[32px] mb-8">
+          <Card className="bg-[#1a3a76] rounded-lg w-full">
+            <CardContent className="p-6">
+              <p className="font-normal text-white text-lg mb-6">
                 La mission du LPS Yopougon, dans le cadre de la formation
-                professionnelle, est de,
+                professionnelle, est de :
               </p>
-              <div className="space-y-8">
+              <div className="space-y-4">
                 {missionItems.map((item, index) => (
-                  <div key={index} className="flex items-start gap-6">
+                  <div key={index} className="flex items-start gap-4">
                     <img
-                      className="w-[65px] h-16 flex-shrink-0"
+                      className="w-8 h-8 flex-shrink-0 mt-1"
                       alt="Target"
                       src="/target.svg"
                     />
-                    <p className="font-normal text-white text-[28px]">{item}</p>
+                    <p className="font-normal text-white text-base">{item}</p>
                   </div>
                 ))}
               </div>
@@ -208,24 +196,24 @@ export const Desktop = (): JSX.Element => {
         </div>
 
         {/* Notre Vision Section */}
-        <div className="w-full px-10 mt-[25px]">
-          <h2 className="font-semibold text-[#1a3a76] text-[70px] mb-[20px]">
+        <div className="w-full py-12 px-8">
+          <h2 className="font-semibold text-[#1a3a76] text-3xl mb-6">
             NOTRE VISION
           </h2>
-          <p className="font-normal text-[#1a3a76] text-[32px] mb-6 max-w-[1020px]">
+          <p className="font-normal text-[#1a3a76] text-lg mb-6">
             À l'horizon 2028, le LPS YOPOUGON se positionne comme un pôle
             d'excellence en Agro-Industrie et en Maintenance Industrielle :
           </p>
-          <div className="space-y-8">
+          <div className="space-y-4">
             {visionItems.map((item, index) => (
-              <Card key={index} className="bg-[#1a3a76] rounded-[15px] w-full">
-                <CardContent className="p-6 flex items-center gap-8">
+              <Card key={index} className="bg-[#1a3a76] rounded-lg w-full">
+                <CardContent className="p-4 flex items-center gap-4">
                   <img
-                    className="w-[65px] h-16 flex-shrink-0"
+                    className="w-8 h-8 flex-shrink-0"
                     alt="Eye"
                     src="/eye.svg"
                   />
-                  <p className="font-normal text-white text-[32px]">{item}</p>
+                  <p className="font-normal text-white text-base">{item}</p>
                 </CardContent>
               </Card>
             ))}
@@ -233,33 +221,33 @@ export const Desktop = (): JSX.Element => {
         </div>
 
         {/* Nos Filières Section */}
-        <div className="w-full px-10 mt-[40px]">
-          <h2 className="font-semibold text-[#1a3a76] text-[70px] mb-[20px]">
-            NOS FILIERES
+        <div className="w-full py-12 px-8 bg-gray-50">
+          <h2 className="font-semibold text-[#1a3a76] text-3xl mb-6">
+            NOS FILIÈRES
           </h2>
-          <div className="flex justify-between gap-16">
+          <div className="grid grid-cols-2 gap-8">
             {filieres.map((filiere, index) => (
               <div key={index} className="flex flex-col">
                 <div className="relative">
                   <img
-                    className="h-[632px] object-cover rounded-lg w-90"
+                    className="h-80 w-full object-cover rounded-lg"
                     alt={filiere.name}
                     src={filiere.image}
                   />
-                  <div className="absolute top-[26px] -left-8 ">
-                    <div className="bg-[#e2df73] rounded-[15px] px-5 py-3 flex items-center">
+                  <div className="absolute top-4 -left-2">
+                    <div className="bg-[#e2df73] rounded-md px-3 py-2 flex items-center">
                       <img
-                        className="w-6 h-6 mr-2"
+                        className="w-4 h-4 mr-2"
                         alt="Bookmark"
                         src="/bookmark.svg"
                       />
-                      <span className="font-semibold text-white text-[15px]">
+                      <span className="font-semibold text-white text-xs">
                         {filiere.name}
                       </span>
                     </div>
                   </div>
                 </div>
-                <p className="font-normal text-[#1a3a76] text-2xl mt-8 max-w-[720px] ">
+                <p className="font-normal text-[#1a3a76] text-sm mt-4">
                   {filiere.description}
                 </p>
               </div>
@@ -268,17 +256,17 @@ export const Desktop = (): JSX.Element => {
         </div>
 
         {/* Nos Produits Section */}
-        <div className="w-full px-10 mt-[40px]">
-          <h2 className="font-semibold text-[#1a3a76] text-[70px] mb-[20px]">
+        <div className="w-full py-12 px-8">
+          <h2 className="font-semibold text-[#1a3a76] text-3xl mb-6">
             NOS PRODUITS
           </h2>
           <div className="w-full">
             <img
-              className="w-full h-[390px] object-cover"
+              className="w-full h-64 object-cover rounded-lg"
               alt="Products"
               src="/rectangle-4.png"
             />
-            <p className="font-normal text-[#1a3a76] text-[32px] mt-8">
+            <p className="font-normal text-[#1a3a76] text-base mt-6 leading-relaxed">
               Au Lycée Professionnel Sectoriel de Yopougon, les apprenants
               bénéficient d'une formation approfondie en transformation
               alimentaire et en fabrication de produits cosmétiques.
@@ -298,80 +286,76 @@ export const Desktop = (): JSX.Element => {
         </div>
 
         {/* Partners Section */}
-        <div className="w-full bg-[#eee8d5] mt-[100px] py-6 flex justify-around items-center">
+        <div className="w-full bg-[#eee8d5] py-8 flex justify-around items-center">
           <img
-            className="h-[251px] object-contain"
+            className="h-20 object-contain"
             alt="Partner 1"
             src="/unnamed.png"
           />
           <img
-            className="h-[243px] object-contain"
+            className="h-20 object-contain"
             alt="Partner 2"
             src="/images1.png"
           />
           <img
-            className="h-[243px] object-contain"
+            className="h-20 object-contain"
             alt="Partner 3"
             src="/la-delegation-de-lunion-europeenne-ue-recrute-pour-ces-2-postes-.png"
           />
         </div>
 
         {/* Footer */}
-        <footer className="mt-[100px]">
-          <div className="bg-[#1a3a76] py-8 flex justify-center">
+        <footer>
+          <div className="bg-[#1a3a76] py-6 flex justify-center">
             <img
-              className="h-[207px] object-contain"
+              className="h-16 object-contain"
               alt="Logo LPS"
               src="/logo-lps-1.png"
             />
           </div>
 
           <div className="w-full">
-            {/* <img
-              className="w-full h-[838px] object-cover"
-              alt="Campus Map"
-              src="/rectangle-19.png"
-            /> */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.1922645388327!2d-4.085218143285839!3d5.355260974688789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1c185fe363ddb%3A0x871dbe6b6f6ccd8c!2sLyc%C3%A9e%20Professionnel%20Sectoriel%20de%20Yopougon!5e0!3m2!1sfr!2sci!4v1743516672624!5m2!1sfr!2sci"
-              width="1262"
-              height="450"
-              allowFullScreen=""
+              width="100%"
+              height="350"
+              allowFullScreen
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="border-0"
             ></iframe>
           </div>
 
-          <div className="bg-[#1a3a76] py-16">
-            <div className="container mx-auto grid grid-cols-3 gap-6">
+          <div className="bg-[#1a3a76] py-8">
+            <div className="container mx-auto grid grid-cols-3 gap-8 px-8">
               {/* Contact Information */}
               <div>
-                <h3 className="font-medium text-[#e2df73] text-[32px] mb-8">
+                <h3 className="font-medium text-[#e2df73] text-lg mb-4">
                   NOUS CONTACTER
                 </h3>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <MapPinIcon className="w-[30px] h-[27px] text-[#e2df73]" />
-                    <p className="font-medium text-white text-[32px]">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <MapPinIcon className="w-5 h-5 text-[#e2df73] mt-1" />
+                    <p className="font-medium text-white text-sm">
                       YOPOUGON BANCO II, <br />
                       CARREFOUR LYCEE
                     </p>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <MailIcon className="w-[30px] h-[27px] text-[#e2df73]" />
-                    <p className="font-medium text-white text-[32px]">
+                  <div className="flex items-center gap-3">
+                    <MailIcon className="w-5 h-5 text-[#e2df73]" />
+                    <p className="font-medium text-white text-sm">
                       infoslps@gmail.com
                     </p>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <PhoneIcon className="w-[30px] h-[27px] text-[#e2df73]" />
-                    <p className="font-medium text-white text-[28px]">
+                  <div className="flex items-center gap-3">
+                    <PhoneIcon className="w-5 h-5 text-[#e2df73]" />
+                    <p className="font-medium text-white text-sm">
                       0707010201 / 0100020405
                     </p>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <FacebookIcon className="w-8 h-8 text-[#e2df73]" />
-                    <p className="font-medium text-white text-[32px]">
+                  <div className="flex items-center gap-3">
+                    <FacebookIcon className="w-5 h-5 text-[#e2df73]" />
+                    <p className="font-medium text-white text-sm">
                       LPS YOPOUGON
                     </p>
                   </div>
@@ -380,15 +364,15 @@ export const Desktop = (): JSX.Element => {
 
               {/* Navigation */}
               <div>
-                <h3 className="font-medium text-[#e2df73] text-[32px] mb-8">
+                <h3 className="font-medium text-[#e2df73] text-lg mb-4">
                   NAVIGATION
                 </h3>
-                <ul className="space-y-4">
+                <ul className="space-y-2">
                   {footerNavItems.map((item, index) => (
-                    <li key={index} className="pl-8">
+                    <li key={index} className="pl-4">
                       <a
                         href="#"
-                        className="font-medium text-white text-[32px]"
+                        className="font-medium text-white text-sm hover:text-[#e2df73] transition-colors"
                       >
                         {item}
                       </a>
@@ -400,40 +384,47 @@ export const Desktop = (): JSX.Element => {
               {/* Useful Links and School Info */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <h3 className="font-medium text-[#e2df73] text-[28px] mb-8 mr-50">
+                  <h3 className="font-medium text-[#e2df73] text-lg mb-4">
                     LIENS UTILES
                   </h3>
-                  <ul className="space-y-6">
-                    <li className="font-medium text-white text-[32px]">
+                  <ul className="space-y-2">
+                    <li className="font-medium text-white text-sm hover:text-[#e2df73] transition-colors cursor-pointer">
                       lien1
                     </li>
-                    <li className="font-medium text-white text-[32px]">
+                    <li className="font-medium text-white text-sm hover:text-[#e2df73] transition-colors cursor-pointer">
                       lien2
                     </li>
-                    <li className="font-medium text-white text-[32px]">
+                    <li className="font-medium text-white text-sm hover:text-[#e2df73] transition-colors cursor-pointer">
                       lien3
                     </li>
-                    <li className="font-medium text-white text-[32px]">
+                    <li className="font-medium text-white text-sm hover:text-[#e2df73] transition-colors cursor-pointer">
                       lien4
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-medium text-[#e2df73] text-[32px] mb-8">
+                  <h3 className="font-medium text-[#e2df73] text-lg mb-4">
                     LE LYCEE
                   </h3>
-                  <p className="font-medium text-white text-[20px]">
-                    1 bloc administratif <br />3 bâtiments de 9 salles de classe{" "}
-                    <br />1 bailment de 4 salles spécialisées <br />1 bâtiment
-                    de 6 laboratoires <br />1 bâtiment halle agro industrie{" "}
-                    <br />1 bâtiment halle maintenance industrielle <br />1
-                    salle d'exposition <br />1 bâtiment cantine <br />3 terrains
-                    de sport (basket-ball, hand-ball, volley-ball) <br />1
-                    espace vert d'environ 2,5 hectares <br />1 parking 25
-                    véhicules <br />1 clôture de 800 mètres
+                  <p className="font-medium text-white text-xs leading-relaxed">
+                    1 bloc administratif <br />
+                    3 bâtiments de 9 salles de classe <br />
+                    1 bailment de 4 salles spécialisées <br />
+                    1 bâtiment de 6 laboratoires <br />
+                    1 bâtiment halle agro industrie <br />
+                    1 bâtiment halle maintenance industrielle <br />
+                    1 salle d'exposition <br />
+                    1 bâtiment cantine <br />
+                    3 terrains de sport <br />
+                    1 espace vert d'environ 2,5 hectares <br />
+                    1 parking 25 véhicules <br />
+                    1 clôture de 800 mètres
                   </p>
                 </div>
               </div>
+            </div>
+            <div className="text-center text-white text-xs mt-8 border-t border-gray-700 pt-4">
+              © {new Date().getFullYear()} Lycée Professionnel Sectoriel de Yopougon - Tous droits réservés
             </div>
           </div>
         </footer>

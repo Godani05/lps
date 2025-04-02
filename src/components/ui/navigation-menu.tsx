@@ -18,34 +18,38 @@ interface CustomNavigationMenuProps {
 
 // Composant de menu personnalisé avec types
 const CustomNavigationMenu: React.FC<CustomNavigationMenuProps> = ({ navItems }) => {
-  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const toggleDropdown = (index: number) => {
-    if (activeDropdown === index) {
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(index);
-    }
+  const handleMouseEnter = (index: number) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
   };
 
   return (
     <div className="flex gap-8">
       {navItems.map((item, index) => (
-        <div key={index} className="relative">
+        <div 
+          key={index} 
+          className="relative"
+          onMouseEnter={() => handleMouseEnter(index)}
+          onMouseLeave={handleMouseLeave}
+        >
           {item.hasDropdown ? (
             <>
               <button
                 className="font-bold text-[#1a3a76] text-[13px] bg-transparent hover:text-[#e2df73] flex items-center"
-                onClick={() => toggleDropdown(index)}
               >
                 {item.label}
                 <ChevronDownIcon 
                   className={`w-4 h-4 ml-1 transition-transform ${
-                    activeDropdown === index ? "rotate-180" : ""
+                    hoveredIndex === index ? "rotate-180" : ""
                   }`} 
                 />
               </button>
-              {activeDropdown === index && (
+              {hoveredIndex === index && (
                 <div className="absolute top-full left-0 mt-2 w-[250px] bg-white rounded-md shadow-lg z-50">
                   <ul className="py-2">
                     {item.submenu?.map((subItem, subIndex) => (

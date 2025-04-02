@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { ChevronDownIcon } from "lucide-react";
 
 // Définition des types
@@ -21,13 +21,21 @@ const CustomNavigationMenu: React.FC<CustomNavigationMenuProps> = ({
   navItems,
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const timeoutRef = useRef<number | null>(null);
 
   const handleMouseEnter = (index: number) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
     setHoveredIndex(index);
   };
 
   const handleMouseLeave = () => {
-    setHoveredIndex(null);
+    // Utiliser un délai pour permettre à la souris de se déplacer vers le sous-menu
+    timeoutRef.current = window.setTimeout(() => {
+      setHoveredIndex(null);
+    }, 100);
   };
 
   return (
@@ -50,7 +58,11 @@ const CustomNavigationMenu: React.FC<CustomNavigationMenuProps> = ({
                 />
               </button>
               {hoveredIndex === index && (
-                <div className="absolute top-full left-0 mt-2 w-[210px] bg-white rounded-md shadow-lg z-50">
+                <div 
+                  className="absolute top-full left-0 mt-2 w-[250px] bg-white rounded-md shadow-lg z-50"
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                >
                   <ul className="py-2">
                     {item.submenu?.map((subItem, subIndex) => (
                       <li

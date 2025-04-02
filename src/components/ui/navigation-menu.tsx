@@ -29,7 +29,7 @@ const CustomNavigationMenu: React.FC<CustomNavigationMenuProps> = ({ navItems })
   };
 
   return (
-    <div className="flex gap-8">
+    <div className="flex gap-8 mr-28">
       {navItems.map((item, index) => (
         <div 
           key={index} 
@@ -40,11 +40,11 @@ const CustomNavigationMenu: React.FC<CustomNavigationMenuProps> = ({ navItems })
           {item.hasDropdown ? (
             <>
               <button
-                className="font-bold text-[#1a3a76] text-[13px] bg-transparent hover:text-[#e2df73] flex items-center"
+                className="font-bold text-[#1a3a76] text-[15px] bg-transparent hover:text-[#e2df73] flex items-center"
               >
                 {item.label}
                 <ChevronDownIcon 
-                  className={`w-4 h-4 ml-1 transition-transform ${
+                  className={`w-6 h-6 ml-1 transition-transform ${
                     hoveredIndex === index ? "rotate-180" : ""
                   }`} 
                 />
@@ -55,7 +55,7 @@ const CustomNavigationMenu: React.FC<CustomNavigationMenuProps> = ({ navItems })
                     {item.submenu?.map((subItem, subIndex) => (
                       <li
                         key={subIndex}
-                        className="px-4 py-2 text-[#1a3a76] text-sm hover:bg-[#e2df73] hover:text-white cursor-pointer transition-colors"
+                        className="px-4 py-2 text-[#1a3a76] text-xm hover:bg-[#e2df73] hover:text-white cursor-pointer transition-colors"
                       >
                         {subItem}
                       </li>
@@ -65,7 +65,7 @@ const CustomNavigationMenu: React.FC<CustomNavigationMenuProps> = ({ navItems })
               )}
             </>
           ) : (
-            <span className="font-bold text-[#1a3a76] text-[13px] cursor-pointer hover:text-[#e2df73]">
+            <span className="font-bold text-[#1a3a76] text-[15px] cursor-pointer hover:text-[#e2df73]">
               {item.label}
             </span>
           )}

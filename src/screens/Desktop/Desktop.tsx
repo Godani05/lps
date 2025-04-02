@@ -76,23 +76,23 @@ export const Desktop = (): JSX.Element => {
         {/* Top Bar */}
         <div className="w-full h-16 flex">
           <div className="w-1/3 h-full bg-[#e2df73] flex items-center pl-8">
-            <div className="flex items-center gap-3">
-              <span className="font-normal text-white text-xs">
+            <div className="flex items-center gap-3 ml-8">
+              <span className="font-normal text-white text-xm">
                 NOUS SUIVRE :
               </span>
-              <div className="w-5 h-5 bg-[#1a3a76] rounded-full flex items-center justify-center">
-                <FacebookIcon className="w-3 h-3 text-white" />
+              <div className="w-6 h-6 bg-[#1a3a76] rounded-full flex items-center justify-center">
+                <FacebookIcon className="w-4 h-4 text-white" />
               </div>
-              <div className="w-5 h-5 bg-[#1a3a76] rounded-full flex items-center justify-center">
-                <YoutubeIcon className="w-3 h-3 text-white" />
+              <div className="w-6 h-6 bg-[#1a3a76] rounded-full flex items-center justify-center">
+                <YoutubeIcon className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>
           <div className="flex-1 h-full bg-[#1a3a76] flex items-center justify-end pr-8">
-            <div className="flex items-center gap-6 text-white text-xs">
+            <div className="flex items-center gap-6 text-white text-xs mr-20 ">
               <div className="flex items-center gap-2">
                 <MapPinIcon className="w-4 h-4 text-[#e2df73]" />
-                <span className="font-normal">
+                <span className="font-normal ">
                   YOPOUGON BANCO II, CARREFOUR LYCEE
                 </span>
               </div>
@@ -111,7 +111,7 @@ export const Desktop = (): JSX.Element => {
         {/* Navigation */}
         <div className="w-full py-4 bg-white flex items-center justify-between px-8 shadow-sm">
           <img
-            className="h-12 object-contain"
+            className="h-12 object-contain ml-20"
             alt="Logo LPS"
             src="/logo-lps-1.png"
           />

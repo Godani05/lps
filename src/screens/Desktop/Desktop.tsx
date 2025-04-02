@@ -49,7 +49,7 @@ export const Desktop = (): JSX.Element => {
   const filieres = [
     {
       name: "Maintenance Industrielle",
-      image: "/mecano.jpg",
+      image: "/mi.jpg",
       description:
         "FORMER DES TECHNICIENS POUR ASSURER LA MAINTENANCE DES EQUIPEMENTS DE PRODUCTION INDUSTRIELLE",
     },
@@ -428,7 +428,7 @@ export const Desktop = (): JSX.Element => {
                   </h3>
                   <div className="flex flex-row gap-6 pb-6 m-2 ">
                     <p className=" h-60 w-1/2 font-medium text-white text-xm leading-relaxed">
-                    1 bloc administratif 
+                    1 bloc administratif <br />
                     3 bâtiments de 9 salles de classe <br />
                     1 bailment de 4 salles spécialisées <br />
                     1 bâtiment de 6 laboratoires <br />

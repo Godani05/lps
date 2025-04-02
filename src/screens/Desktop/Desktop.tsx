@@ -7,13 +7,15 @@ import {
 } from "lucide-react";
 import React from "react";
 import { Card, CardContent } from "../../components/ui/card";
-import {
-  NavigationMenu,
+import  CustomNavigationMenu  from "../../components/ui/navigation-menu";
+/*import {
+   CustomNavigationMenu */
+  /* NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
-  NavigationMenuTrigger,
-} from "../../components/ui/navigation-menu";
+  NavigationMenuTrigger ,
+} from "../../components/ui/navigation-menu";*/
 
 export const Desktop = (): JSX.Element => {
   // Navigation menu items
@@ -117,51 +119,17 @@ export const Desktop = (): JSX.Element => {
             </div>
           </div>
         </div>
-
         {/* Navigation */}
-        <div className="w-full h-[px] mt-[10px] bg-white flex items-center justify-center">
-          <div className="flex items-center">
-            <img
-              className="w-[45px] h-[50px] mr-[373px] mb-4"
-              alt="Logo LPS"
-              src="/logo-lps-1.png"
-            />
-            <NavigationMenu>
-              <NavigationMenuList className="flex gap-8">
-                {navItems.map((item, index) => (
-                  <NavigationMenuItem key={index} className="relative">
-                    {item.hasDropdown ? (
-                      <NavigationMenuTrigger className="font-bold text-[#1a3a76] text-[13px] bg-transparent hover:bg-transparent focus:text-[#e2df73]  hover:text-[#e2df73]">
-                        {item.label}
-                        {/* <ChevronDownIcon className="w-5 h-5 ml-2" /> */}
-                      </NavigationMenuTrigger>
-                    ) : (
-                      <span className="font-bold text-[#1a3a76] text-[13px] cursor-pointer bg-transparent hover:bg-transparent focus:text-[#e2df73]  hover:text-[#e2df73]">
-                        {item.label}
-                      </span>
-                    )}
-                    {item.hasDropdown && (
-                      <NavigationMenuContent>
-                        <div className="p-4 w-[250px] bg-white rounded-md shadow-lg">
-                          <ul className="space-y-2">
-                            {item.submenu?.map((subItem, subIndex) => (
-                              <li
-                                key={subIndex}
-                                className="px-2 py-1.5 text-[#1a3a76] text-sm hover:bg-[#e2df73] hover:text-white rounded cursor-pointer transition-colors"
-                              >
-                                {subItem}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </NavigationMenuContent>
-                    )}
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-        </div>
+<div className="w-full h-[px] mt-[10px] bg-white flex items-center justify-center">
+  <div className="flex items-center">
+    <img
+      className="w-[45px] h-[50px] mr-[373px] mb-4"
+      alt="Logo LPS"
+      src="/logo-lps-1.png"
+    />
+    <CustomNavigationMenu navItems={navItems} />
+  </div>
+</div>
 
         {/* Hero Section */}
         <div className="w-full h-[906px] relative">

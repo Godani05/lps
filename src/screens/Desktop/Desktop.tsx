@@ -88,20 +88,20 @@ export const Desktop = (): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="flex-1 h-full bg-[#1a3a76] flex items-center justify-center pr-8">
-            <div className="flex items-center gap-6 text-white text-xs  mr-20 ">
+          <div className="flex-1 h-full bg-[#1a3a76] flex items-center justify-center pr-8 ">
+            <div className="flex items-center gap-6 text-white text-xs ml-4 ">
               <div className="flex items-center gap-2">
-                <MapPinIcon className="w-4 h-4 text-[#e2df73]" />
+                <MapPinIcon className="w-6 h-6 text-[#e2df73]" />
                 <span className="font-normal ">
                   YOPOUGON BANCO II, CARREFOUR LYCEE
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <MailIcon className="w-4 h-4 text-[#e2df73]" />
+                <MailIcon className="w-6 h-6 text-[#e2df73]" />
                 <span className="font-normal">infoslps@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <PhoneIcon className="w-4 h-4 text-[#e2df73]" />
+                <PhoneIcon className="w-6 h-6 text-[#e2df73]" />
                 <span className="font-normal">0707010201 / 0100020405</span>
               </div>
             </div>
@@ -111,7 +111,7 @@ export const Desktop = (): JSX.Element => {
         {/* Navigation */}
         <div className="w-full py-4 bg-white flex items-center justify-between px-8 shadow-sm">
           <img
-            className="h-12 object-contain ml-20"
+            className="w-12 h-12 object-contain ml-20"
             alt="Logo LPS"
             src="/logo-lps-1.png"
           />
@@ -134,21 +134,21 @@ export const Desktop = (): JSX.Element => {
 
         {/* Qui Sommes Nous Section */}
         <div className="w-full py-16 px-8">
-          <div className="flex flex-row gap-8 items-center">
-            <div className="w-2/5">
+          <div className="flex flex-row items-center">
+            <div className="w-2/5 absolute">
               <img
-                className="w-full rounded-lg object-cover h-96"
+                className="w-full rounded-lg object-cover h-96 "
                 alt="Campus"
                 src="/129145710-147881587116174-1814296285761364023-n.png"
               />
             </div>
-            <div className="w-3/5">
-              <h2 className="font-semibold text-[#1a3a76] text-3xl mb-6">
+            <div className="w-3/5 pt-10 ml-[475px]">
+              <h2 className="font-semibold text-[#1a3a76] text-4xl mb-6 pl-12">
                 QUI SOMMES NOUS ?
               </h2>
-              <Card className="bg-[#1a3a76] rounded-lg">
+              <Card className="bg-[#1a3a76] rounded-lg ">
                 <CardContent className="p-6">
-                  <p className="font-normal text-white text-base leading-relaxed">
+                  <p className="font-normal text-white text-xl leading-relaxed mb-4 pl-4">
                     Le Lycée Professionnel Sectoriel (LPS) de Yopougon est une
                     institution éducative située à Yopougon, une commune
                     d'Abidjan en Côte d'Ivoire.
@@ -169,8 +169,8 @@ export const Desktop = (): JSX.Element => {
         </div>
 
         {/* Notre Mission Section */}
-        <div className="w-full py-12 px-8 bg-gray-50">
-          <h2 className="font-semibold text-[#1a3a76] text-3xl mb-6">
+        <div className="w-full py-0 px-8 bg-gray-50">
+          <h2 className="font-semibold text-[#1a3a76] text-4xl mb-6">
             NOTRE MISSION
           </h2>
           <Card className="bg-[#1a3a76] rounded-lg w-full">
@@ -187,7 +187,7 @@ export const Desktop = (): JSX.Element => {
                       alt="Target"
                       src="/target.svg"
                     />
-                    <p className="font-normal text-white text-base">{item}</p>
+                    <p className="font-normal text-white text-lg mt-1">{item}</p>
                   </div>
                 ))}
               </div>
@@ -197,7 +197,7 @@ export const Desktop = (): JSX.Element => {
 
         {/* Notre Vision Section */}
         <div className="w-full py-12 px-8">
-          <h2 className="font-semibold text-[#1a3a76] text-3xl mb-6">
+          <h2 className="font-semibold text-[#1a3a76] text-4xl mb-6">
             NOTRE VISION
           </h2>
           <p className="font-normal text-[#1a3a76] text-lg mb-6">
@@ -213,7 +213,7 @@ export const Desktop = (): JSX.Element => {
                     alt="Eye"
                     src="/eye.svg"
                   />
-                  <p className="font-normal text-white text-base">{item}</p>
+                  <p className="font-normal text-white text-lg">{item}</p>
                 </CardContent>
               </Card>
             ))}
@@ -222,7 +222,7 @@ export const Desktop = (): JSX.Element => {
 
         {/* Nos Filières Section */}
         <div className="w-full py-12 px-8 bg-gray-50">
-          <h2 className="font-semibold text-[#1a3a76] text-3xl mb-6">
+          <h2 className="font-semibold text-[#1a3a76] text-4xl mb-6">
             NOS FILIÈRES
           </h2>
           <div className="grid grid-cols-2 gap-8">

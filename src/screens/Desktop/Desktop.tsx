@@ -88,8 +88,8 @@ export const Desktop = (): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="flex-1 h-full bg-[#1a3a76] flex items-center justify-end pr-8">
-            <div className="flex items-center gap-6 text-white text-xs mr-20 ">
+          <div className="flex-1 h-full bg-[#1a3a76] flex items-center justify-center pr-8">
+            <div className="flex items-center gap-6 text-white text-xs  mr-20 ">
               <div className="flex items-center gap-2">
                 <MapPinIcon className="w-4 h-4 text-[#e2df73]" />
                 <span className="font-normal ">

@@ -15,19 +15,34 @@ export const Desktop = (): JSX.Element => {
     {
       label: "LE LYCEE",
       hasDropdown: true,
-      submenu: ["A propos", "Mot du Proviseur", "Organisation", "Vie Scolaire"],
+      submenu: [
+        "Présentation",
+        "Mot du Proviseur",
+        "Organisation",
+        "Vie Scolaire",
+      ],
     },
-    { label: "FORMATION", hasDropdown: false },
+    {
+      label: "FORMATION",
+      hasDropdown: true,
+      submenu: ["Formation Initiale", "Formation Continue"],
+    },
     { label: "ACTUALITES", hasDropdown: false },
     {
       label: "SERVICES",
       hasDropdown: true,
-      submenu: ["Nos Produits", "Nos Materiels"],
+      submenu: ["Nos Produits", "Nos Materiels", "Bibliothèque"],
     },
     {
       label: "INFOS",
       hasDropdown: true,
-      submenu: ["Admission et Inscription", "Reglement Interieur", "Intranet"],
+      submenu: [
+        "Admission et Inscription",
+        "Reglement Interieur",
+        "Enregistrement FDFP",
+        "Galerie",
+        "Intranet",
+      ],
     },
   ];
 
@@ -49,7 +64,7 @@ export const Desktop = (): JSX.Element => {
   const filieres = [
     {
       name: "Maintenance Industrielle",
-      image: "/mi.jpg",
+      image: "/Image3.jpg",
       description:
         "FORMER DES TECHNICIENS POUR ASSURER LA MAINTENANCE DES EQUIPEMENTS DE PRODUCTION INDUSTRIELLE",
     },
@@ -102,7 +117,7 @@ export const Desktop = (): JSX.Element => {
               </div>
               <div className="flex items-center gap-2">
                 <PhoneIcon className="w-6 h-6 text-[#e2df73]" />
-                <span className="font-normal">0707010201 / 0100020405</span>
+                <span className="font-normal">0707151163/ 0707862707</span>
               </div>
             </div>
           </div>
@@ -123,9 +138,9 @@ export const Desktop = (): JSX.Element => {
           <img
             className="w-full h-full object-cover"
             alt="Campus"
-            src="/rectangle-5.png"
+            src="/bannière.png"
           />
-          <div className="absolute bottom-8 left-8 px-6 py-3 bg-[#1a3a76] flex items-center justify-center cursor-pointer hover:bg-[#e2df73] transition-colors duration-300">
+          <div className="absolute bottom-8 left-8 px-6 py-3 rounded-sm bg-[#1a3a76] flex items-center justify-center cursor-pointer hover:bg-[#e2df73] transition-colors duration-300">
             <button className="font-normal text-white text-lg">
               NOUS DECOUVRIR
             </button>
@@ -187,7 +202,9 @@ export const Desktop = (): JSX.Element => {
                       alt="Target"
                       src="/target.svg"
                     />
-                    <p className="font-normal text-white text-lg mt-1">{item}</p>
+                    <p className="font-normal text-white text-lg mt-1">
+                      {item}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -225,33 +242,35 @@ export const Desktop = (): JSX.Element => {
           <h2 className="font-semibold text-[#1a3a76] text-4xl mb-6">
             NOS FILIÈRES
           </h2>
-          <div className="grid grid-cols-2 gap-8">
-            {filieres.map((filiere, index) => (
-              <div key={index} className="flex flex-col">
-                <div className="relative">
-                  <img
-                    className="h-80 w-full object-cover rounded-lg"
-                    alt={filiere.name}
-                    src={filiere.image}
-                  />
-                  <div className="absolute top-4 -left-6">
-                    <div className="bg-[#e2df73] rounded-md px-3 py-2 flex items-center">
-                      <img
-                        className="w-4 h-4 mr-2"
-                        alt="Bookmark"
-                        src="/bookmark.svg"
-                      />
-                      <span className="font-semibold text-white text-xs">
-                        {filiere.name}
-                      </span>
+          <div>
+            <a href="" className="grid grid-cols-2 gap-8">
+              {filieres.map((filiere, index) => (
+                <div key={index} className="flex flex-col">
+                  <div className="relative">
+                    <img
+                      className="h-80 w-full object-cover rounded-lg"
+                      alt={filiere.name}
+                      src={filiere.image}
+                    />
+                    <div className="absolute top-4 -left-6">
+                      <div className="bg-[#e2df73] rounded-md px-3 py-2 flex items-center">
+                        <img
+                          className="w-4 h-4 mr-2"
+                          alt="Bookmark"
+                          src="/bookmark.svg"
+                        />
+                        <span className="font-semibold text-white text-xs">
+                          {filiere.name}
+                        </span>
+                      </div>
                     </div>
                   </div>
+                  <p className="font-normal text-[#1a3a76] text-lg mt-4">
+                    {filiere.description}
+                  </p>
                 </div>
-                <p className="font-normal text-[#1a3a76] text-lg mt-4">
-                  {filiere.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </a>
           </div>
         </div>
 
@@ -261,22 +280,24 @@ export const Desktop = (): JSX.Element => {
             NOS PRODUITS
           </h2>
           <div className="w-full">
-            <div className="flex flex-row gap-6">
-            <img
-              className="w-1/3 h-64 object-cover rounded-lg"
-              alt="Products"
-              src="/rectangle-4.png"
-            />
-            <img
-              className="w-1/3 h-64 object-cover rounded-lg"
-              alt="Products"
-              src="/rectangle-4.png"
-            />
-            <img
-              className="w-1/3 h-64 object-cover rounded-lg"
-              alt="Products"
-              src="/rectangle-4.png"
-            />
+            <div>
+              <a href="" className="flex flex-row gap-6">
+                <img
+                  className="w-1/3 h-64 object-cover rounded-lg"
+                  alt="Products"
+                  src="/Image7.png"
+                />
+                <img
+                  className="w-1/3 h-64 object-cover rounded-lg"
+                  alt="Products"
+                  src="/Image4.png"
+                />
+                <img
+                  className="w-1/3 h-64 object-cover rounded-lg"
+                  alt="Products"
+                  src="/Image5.png"
+                />
+              </a>
             </div>
             <p className="font-normal text-[#1a3a76] text-lg mt-6 leading-relaxed">
               Au Lycée Professionnel Sectoriel de Yopougon, les apprenants
@@ -318,12 +339,15 @@ export const Desktop = (): JSX.Element => {
 
         {/* Footer */}
         <footer>
-          <div className="bg-[#1a3a76] py-6 flex justify-center">
+          <div className="bg-[#1a3a76] py-2 flex justify-center flex-col">
             <img
-              className="h-[110px] object-contain"
+              className="h-[110px] object-contain "
               alt="Logo LPS"
               src="/logo-lps-1.png"
             />
+            <p className="flex justify-center mt-2 text-lg text-white font-light italic">
+              Lycée Professionnel Sectoriel de Yopougon
+            </p>
           </div>
 
           <div className="w-full">
@@ -362,7 +386,9 @@ export const Desktop = (): JSX.Element => {
                   <div className="flex items-center gap-3">
                     <PhoneIcon className="w-5 h-5 text-[#e2df73]" />
                     <p className="font-medium text-white text-xm">
-                      0707010201 / 0100020405
+                      0707151163/ 0707862707/
+                      <br />
+                      0707907235 / 0707720261
                     </p>
                   </div>
                   <div className="flex items-center gap-3">
@@ -394,77 +420,75 @@ export const Desktop = (): JSX.Element => {
               </div>
 
               {/* Useful Links and School Info */}
-              
-                <div className="">
-                  <h3 className="font-medium text-[#e2df73] text-xl mb-4">
-                    LIENS UTILES
-                  </h3>
-                  <ul className="space-y-2 ">
-                    <a href=""
-                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
+
+              <div className="">
+                <h3 className="font-medium text-[#e2df73] text-xl mb-4">
+                  LIENS UTILES
+                </h3>
+                <ul className="space-y-2 ">
+                  <a
+                    href=""
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
+                  >
                     Sites Internet du METFPA
-                    </a><br/>
-                    <a href=""
-                     className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
+                  </a>
+                  <br />
+                  <a
+                    href=""
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
+                  >
                     formation-professionnelle.gouv.ci
-                    </a><br/>
-                    <a href=""
-                     className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
+                  </a>
+                  <br />
+                  <a
+                    href=""
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
+                  >
                     dexcci.net
-                    </a><br/>
-                    <a href=""
-                     className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
+                  </a>
+                  <br />
+                  <a
+                    href=""
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
+                  >
                     decobci.net
-                    </a ><br/>
-                    <a href=""
-                     className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
+                  </a>
+                  <br />
+                  <a
+                    href=""
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
+                  >
                     ersys-ci.net
-                    </a>
-                  </ul>
-                </div>
-                <div className=" w-[450px] pl-4">
-                  <h3 className="flex font-medium text-[#e2df73] text-xl mb-4  items-center ">
-                    LE LYCEE
-                  </h3>
-                  <div className="flex flex-row gap-6 pb-6 m-2 ">
-                    <p className=" h-60 w-1/2 font-medium text-white text-xm leading-relaxed">
+                  </a>
+                </ul>
+              </div>
+              <div className=" w-[450px] pl-4">
+                <h3 className="flex font-medium text-[#e2df73] text-xl mb-4  items-center ">
+                  LE LYCEE
+                </h3>
+                <div className="flex flex-row gap-6 pb-6 m-2 ">
+                  <p className=" h-60 w-1/2 font-medium text-white text-xm leading-relaxed">
                     1 bloc administratif <br />
                     3 bâtiments de 9 salles de classe <br />
                     1 bailment de 4 salles spécialisées <br />
                     1 bâtiment de 6 laboratoires <br />
                     1 bâtiment halle agro industrie <br />
-                    
-                    
-                    </p>
-                    <p className="h-60 w-1/2 font-medium text-white text-xm leading-relaxed">
+                  </p>
+                  <p className="h-60 w-1/2 font-medium text-white text-xm leading-relaxed">
                     1 salle d'exposition <br />
                     1 bâtiment cantine <br />
                     3 terrains de sport <br />
                     1 espace vert d'environ 2,5 hectares <br />
                     1 parking 25 véhicules <br />
-                    1 clôture de 800 mètres <br/>
+                    1 clôture de 800 mètres <br />
                     1 bâtiment halle maintenance industrielle <br />
-                    </p>
-                  </div>
-                  {/* <p className="font-medium text-white text-xm leading-relaxed ">
-                    1 bloc administratif 
-                    3 bâtiments de 9 salles de classe <br />
-                    1 bailment de 4 salles spécialisées <br />
-                    1 bâtiment de 6 laboratoires <br />
-                    1 bâtiment halle agro industrie <br />
-                    1 bâtiment halle maintenance industrielle <br />
-                    1 salle d'exposition <br />
-                    1 bâtiment cantine <br />
-                    3 terrains de sport <br />
-                    1 espace vert d'environ 2,5 hectares <br />
-                    1 parking 25 véhicules <br />
-                    1 clôture de 800 mètres
-                  </p> */}
+                  </p>
                 </div>
-              
+              </div>
             </div>
             <div className="text-center text-white text-xs mt-4 border-t border-gray-700 pt-4">
-              © {new Date().getFullYear()} Lycée Professionnel Sectoriel de Yopougon - Tous droits réservés
+              © {new Date().getFullYear()} Lycée Professionnel Sectoriel de
+              Yopougon - Tous droits réservés
             </div>
           </div>
         </footer>

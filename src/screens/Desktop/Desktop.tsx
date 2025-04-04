@@ -139,7 +139,7 @@ export const Desktop = (): JSX.Element => {
         </div>
 
         {/* Hero Section */}
-        <div className="w-full h-[600px] relative">
+        <div className="w-full h-[440px] relative">
           <img
             className="w-full h-full object-cover"
             alt="Campus"

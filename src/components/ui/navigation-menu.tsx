@@ -2,9 +2,10 @@ import React, { useState, useRef } from "react";
 import { ChevronDownIcon } from "lucide-react";
 
 // Définition des types
-interface SubmenuItem {
-  label: string;
-}
+// interface SubmenuItem {
+//   label: string;
+// }
+
 
 interface NavItem {
   label: string;

@@ -8,7 +8,6 @@ import {
 import { Card, CardContent } from "../../components/ui/card";
 import CustomNavigationMenu from "../../components/ui/navigation-menu";
 
-
 export const Desktop = (): JSX.Element => {
   // Navigation menu items
   const navItems = [
@@ -20,7 +19,7 @@ export const Desktop = (): JSX.Element => {
         // { name: "Mot du Proviseur", url: "/mot-proviseur" },
         // { name: "Organisation", url: "/organisation" },
         // { name: "Vie Scolaire", url: "/vie-scolaire" },
-        
+
         "Présentation",
         "Mot du Proviseur",
         "Organisation",
@@ -149,8 +148,9 @@ export const Desktop = (): JSX.Element => {
           />
           <div
             onClick={() => (window.location.href = "/le-lycee/presentation")}
-            className="absolute bottom-8 left-8 px-6 py-3 rounded-sm bg-[#1a3a76] flex items-center justify-center cursor-pointer hover:bg-[#e2df73] transition-colors duration-300">
-            <button className="font-normal text-white text-lg">
+            className="absolute bottom-8 left-8 px-6 py-3 rounded-sm bg-[#1a3a76] flex items-center justify-center cursor-pointer hover:bg-[#e2df73] text-white hover:text-[#1a3a76] text-lg transition-colors duration-300"
+          >
+            <button className="font-normal ">
               NOUS DECOUVRIR
             </button>
           </div>
@@ -172,7 +172,7 @@ export const Desktop = (): JSX.Element => {
               </h2>
               <Card className="bg-[#1a3a76] rounded-lg ">
                 <CardContent className="p-6">
-                  <p  className="font-normal text-white text-xl leading-relaxed mb-4 pl-4">
+                  <p className="font-normal text-white text-xl leading-relaxed mb-4 pl-4">
                     Le Lycée Professionnel Sectoriel (LPS) de Yopougon est une
                     institution éducative située à Yopougon, une commune
                     d'Abidjan en Côte d'Ivoire.
@@ -280,6 +280,46 @@ export const Desktop = (): JSX.Element => {
                 </div>
               ))}
             </a>
+            {/* Formation Continue Section */}
+            <div className="w-full py-12 px-8 bg-gray-50">
+              <h2 className="font-semibold text-[#1a3a76] text-3xl mb-6">
+                FORMATION CONTINUE
+              </h2>
+              <div className="flex flex-row  justify-center gap-3">
+                <img
+                  className=" rounded-lg object-cover h-96 "
+                  alt="formation continue"
+                  src="/form-continue.jpg"
+                />
+                <CardContent className="w-1/2 p-6">
+                  <p className="font-normal text-[#1a3a76] text-lg  mb-4">
+                    Le Lycée Professionnel Sectoriel de Yopougon propose des
+                    programmes de formation continue adaptés aux professionnels
+                    et aux entreprises des secteurs de l'Agro-Industrie et de la
+                    Maintenance Industrielle. Nos formations sont conçues pour
+                    renforcer les compétences techniques et managériales des
+                    travailleurs en activité, favorisant ainsi leur évolution
+                    professionnelle et l'amélioration de leur productivité.
+                    Dispensées par des formateurs expérimentés et dans des
+                    installations modernes, nos programmes répondent aux besoins
+                    spécifiques du milieu productif ivoirien tout en intégrant
+                    les innovations technologiques les plus récentes.
+                  </p>
+                  <div className="flex justify-center">
+                    <div
+                      onClick={() =>
+                        (window.location.href = "/formation/formation-continue")
+                      }
+                      className="px-6 py-3 rounded-sm bg-[#1a3a76] flex items-center justify-center cursor-pointer hover:bg-[#e2df73] text-white hover:text-[#1a3a76] text-lg transition-colors duration-300"
+                    >
+                      <button className="font-medium  ">
+                        PLUS D'INFORMATIONS
+                      </button>
+                    </div>
+                  </div>
+                </CardContent>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -291,7 +331,8 @@ export const Desktop = (): JSX.Element => {
           <div className="w-full">
             <div
               onClick={() => (window.location.href = "")}
-              className="flex flex-row gap-6">
+              className="flex flex-row gap-6"
+            >
               <img
                 className="w-1/3 h-64 object-cover rounded-lg"
                 alt="Products"
@@ -308,7 +349,7 @@ export const Desktop = (): JSX.Element => {
                 src="/Image5.png"
               />
             </div>
-            <p className="font-normal text-[#1a3a76] text-lg mt-6 leading-relaxed">
+            <p className="font-normal text-[#1a3a76] text-lg mt-6">
               Au Lycée Professionnel Sectoriel de Yopougon, les apprenants
               bénéficient d'une formation approfondie en transformation
               alimentaire et en fabrication de produits cosmétiques.
@@ -329,7 +370,7 @@ export const Desktop = (): JSX.Element => {
 
         {/* Partners Section*/}
         <div className="w-full bg-slate-100 py-8 flex justify-around items-center">
-        <img
+          <img
             className="h-[110px] object-contain"
             alt="Partner 2"
             src="/unnamed.png"
@@ -344,7 +385,6 @@ export const Desktop = (): JSX.Element => {
             alt="Partner 1"
             src="/images1.png"
           />
-          
         </div>
 
         {/* Footer */}
@@ -368,7 +408,8 @@ export const Desktop = (): JSX.Element => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="border-0"></iframe>
+              className="border-0"
+            ></iframe>
           </div>
 
           <div className="bg-[#1a3a76] py-8 gap-2">
@@ -419,7 +460,8 @@ export const Desktop = (): JSX.Element => {
                     <li key={index} className="pl-4">
                       <a
                         href="#"
-                        className="font-medium text-white text-xm hover:text-[#e2df73] transition-colors">
+                        className="font-medium text-white text-xm hover:text-[#e2df73] transition-colors"
+                      >
                         {item}
                       </a>
                     </li>
@@ -436,31 +478,36 @@ export const Desktop = (): JSX.Element => {
                 <ul className="space-y-2 ">
                   <a
                     href=""
-                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
+                  >
                     Sites Internet du METFPA
                   </a>
                   <br />
                   <a
                     href=""
-                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
+                  >
                     formation-professionnelle.gouv.ci
                   </a>
                   <br />
                   <a
                     href=""
-                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
+                  >
                     dexcci.net
                   </a>
                   <br />
                   <a
                     href=""
-                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
+                  >
                     decobci.net
                   </a>
                   <br />
                   <a
                     href=""
-                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
+                  >
                     ersys-ci.net
                   </a>
                 </ul>

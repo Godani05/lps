@@ -5,9 +5,9 @@ import {
   PhoneIcon,
   YoutubeIcon,
 } from "lucide-react";
-import React from "react";
 import { Card, CardContent } from "../../components/ui/card";
 import CustomNavigationMenu from "../../components/ui/navigation-menu";
+
 
 export const Desktop = (): JSX.Element => {
   // Navigation menu items
@@ -16,6 +16,11 @@ export const Desktop = (): JSX.Element => {
       label: "LE LYCEE",
       hasDropdown: true,
       submenu: [
+        // { name: "Présentation", url: "/presentation" },
+        // { name: "Mot du Proviseur", url: "/mot-proviseur" },
+        // { name: "Organisation", url: "/organisation" },
+        // { name: "Vie Scolaire", url: "/vie-scolaire" },
+        
         "Présentation",
         "Mot du Proviseur",
         "Organisation",
@@ -38,7 +43,7 @@ export const Desktop = (): JSX.Element => {
       hasDropdown: true,
       submenu: [
         "Admission et Inscription",
-        "Reglement Interieur",
+        "Réglement Interieur",
         "Enregistrement FDFP",
         "Galerie",
         "Intranet",

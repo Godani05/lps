@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
 import { ChevronDownIcon } from "lucide-react";
-
+// import { useNavigate } from 'react-router-dom'; // Si vous utilisez React Router
 // Définition des types
-interface SubmenuItem {
-  label: string;
-}
+// interface SubmenuItem {
+//   label: string;
+// }
 
 interface NavItem {
   label: string;

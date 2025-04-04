@@ -130,11 +130,13 @@ export const Desktop = (): JSX.Element => {
 
         {/* Navigation */}
         <div className="w-full py-4 bg-white flex items-center justify-between px-8 shadow-sm">
-          <img
-            className="w-12 h-12 object-contain ml-20"
-            alt="Logo LPS"
-            src="/logo-lps-1.png"
-          />
+          <a href="/">
+            <img
+              className="w-12 h-12 object-contain ml-20 cursor-pointer"
+              alt="Logo LPS"
+              src="/logo-lps-1.png"
+            />
+          </a>
           <CustomNavigationMenu navItems={navItems} />
         </div>
 
@@ -145,7 +147,9 @@ export const Desktop = (): JSX.Element => {
             alt="Campus"
             src="/bannière.png"
           />
-          <div className="absolute bottom-8 left-8 px-6 py-3 rounded-sm bg-[#1a3a76] flex items-center justify-center cursor-pointer hover:bg-[#e2df73] transition-colors duration-300">
+          <div
+            onClick={() => (window.location.href = "/le-lycee/presentation")}
+            className="absolute bottom-8 left-8 px-6 py-3 rounded-sm bg-[#1a3a76] flex items-center justify-center cursor-pointer hover:bg-[#e2df73] transition-colors duration-300">
             <button className="font-normal text-white text-lg">
               NOUS DECOUVRIR
             </button>
@@ -163,7 +167,7 @@ export const Desktop = (): JSX.Element => {
               />
             </div>
             <div className="w-3/5 pt-10 ml-[475px]">
-              <h2 className="font-semibold text-[#1a3a76] text-4xl mb-6 pl-12">
+              <h2 className="font-semibold text-[#1a3a76] text-4xl mb-6 pl-20">
                 QUI SOMMES NOUS ?
               </h2>
               <Card className="bg-[#1a3a76] rounded-lg ">
@@ -250,7 +254,7 @@ export const Desktop = (): JSX.Element => {
           <div>
             <a href="" className="grid grid-cols-2 gap-8">
               {filieres.map((filiere, index) => (
-                <div key={index} className="flex flex-col">
+                <div key={index} className="flex flex-col cursor-pointer">
                   <div className="relative">
                     <img
                       className="h-80 w-full object-cover rounded-lg"
@@ -285,24 +289,24 @@ export const Desktop = (): JSX.Element => {
             NOS PRODUITS
           </h2>
           <div className="w-full">
-            <div>
-              <a href="" className="flex flex-row gap-6">
-                <img
-                  className="w-1/3 h-64 object-cover rounded-lg"
-                  alt="Products"
-                  src="/Image7.png"
-                />
-                <img
-                  className="w-1/3 h-64 object-cover rounded-lg"
-                  alt="Products"
-                  src="/Image4.png"
-                />
-                <img
-                  className="w-1/3 h-64 object-cover rounded-lg"
-                  alt="Products"
-                  src="/Image5.png"
-                />
-              </a>
+            <div
+              onClick={() => (window.location.href = "")}
+              className="flex flex-row gap-6">
+              <img
+                className="w-1/3 h-64 object-cover rounded-lg"
+                alt="Products"
+                src="/Image7.png"
+              />
+              <img
+                className="w-1/3 h-64 object-cover rounded-lg"
+                alt="Products"
+                src="/Image4.png"
+              />
+              <img
+                className="w-1/3 h-64 object-cover rounded-lg"
+                alt="Products"
+                src="/Image5.png"
+              />
             </div>
             <p className="font-normal text-[#1a3a76] text-lg mt-6 leading-relaxed">
               Au Lycée Professionnel Sectoriel de Yopougon, les apprenants
@@ -323,7 +327,7 @@ export const Desktop = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Partners Section bg-[#eee8d5]*/}
+        {/* Partners Section*/}
         <div className="w-full bg-slate-100 py-8 flex justify-around items-center">
         <img
             className="h-[110px] object-contain"
@@ -364,8 +368,7 @@ export const Desktop = (): JSX.Element => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="border-0"
-            ></iframe>
+              className="border-0"></iframe>
           </div>
 
           <div className="bg-[#1a3a76] py-8 gap-2">
@@ -416,8 +419,7 @@ export const Desktop = (): JSX.Element => {
                     <li key={index} className="pl-4">
                       <a
                         href="#"
-                        className="font-medium text-white text-xm hover:text-[#e2df73] transition-colors"
-                      >
+                        className="font-medium text-white text-xm hover:text-[#e2df73] transition-colors">
                         {item}
                       </a>
                     </li>
@@ -434,36 +436,31 @@ export const Desktop = (): JSX.Element => {
                 <ul className="space-y-2 ">
                   <a
                     href=""
-                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
-                  >
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
                     Sites Internet du METFPA
                   </a>
                   <br />
                   <a
                     href=""
-                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
-                  >
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
                     formation-professionnelle.gouv.ci
                   </a>
                   <br />
                   <a
                     href=""
-                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
-                  >
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
                     dexcci.net
                   </a>
                   <br />
                   <a
                     href=""
-                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
-                  >
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
                     decobci.net
                   </a>
                   <br />
                   <a
                     href=""
-                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer"
-                  >
+                    className="font-medium text-white text-xl hover:text-[#e2df73] transition-colors cursor-pointer">
                     ersys-ci.net
                   </a>
                 </ul>

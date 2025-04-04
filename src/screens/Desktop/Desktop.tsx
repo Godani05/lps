@@ -70,13 +70,13 @@ export const Desktop = (): JSX.Element => {
       name: "Maintenance Industrielle",
       image: "/Image3.jpg",
       description:
-        "FORMER DES TECHNICIENS POUR ASSURER LA MAINTENANCE DES EQUIPEMENTS DE PRODUCTION INDUSTRIELLE",
+        "Former des techniciens pour assurer la maintenance des équipements de production industrielle",
     },
     {
       name: "Agro-Industrie",
       image: "/agro-industrie.png",
       description:
-        "PREPARER LES ELEVES AUX METIERS DE LA TRANSFORMATION ALIMENTAIRE ET COSMETIQUE, AVEC DES COMPETENCES THEORIQUES ET PRATIQUES DANS LES PROCEDES DE PRODUCTION ET DE GESTION DE LA QUALITE",
+        "Préparer les élèves aux métiers de la transformation alimentaire et cosmétique, avec des compétences théoriques et pratiques dans les procédés de production et des gestions de la qualité",
     },
   ];
 
@@ -150,9 +150,7 @@ export const Desktop = (): JSX.Element => {
             onClick={() => (window.location.href = "/le-lycee/presentation")}
             className="absolute bottom-8 left-8 px-6 py-3 rounded-sm bg-[#1a3a76] flex items-center justify-center cursor-pointer hover:bg-[#e2df73] text-white hover:text-[#1a3a76] text-lg transition-colors duration-300"
           >
-            <button className="font-normal ">
-              NOUS DECOUVRIR
-            </button>
+            <button className="font-normal ">NOUS DECOUVRIR</button>
           </div>
         </div>
 
@@ -293,19 +291,20 @@ export const Desktop = (): JSX.Element => {
                 />
                 <CardContent className="w-1/2 p-6">
                   <p className="font-normal text-[#1a3a76] text-lg text-justify mb-4">
-                    Le Lycée Professionnel Sectoriel de Yopougon propose des
-                    programmes de formation continue adaptés aux professionnels
-                    et aux entreprises des secteurs de l'Agro-Industrie et de la
-                    Maintenance Industrielle. Nos formations sont conçues pour
-                    renforcer les compétences techniques et managériales des
-                    travailleurs en activité, favorisant ainsi leur évolution
-                    professionnelle et l'amélioration de leur productivité.
-                    Dispensées par des formateurs expérimentés et dans des
-                    installations modernes, nos programmes répondent aux besoins
-                    spécifiques du milieu productif ivoirien tout en intégrant
-                    les innovations technologiques les plus récentes.
+                    Le Lycée Professionnel Sectoriel (LPS) de Yopougon propose
+                    des programmes de formation continue adaptés aux
+                    professionnels et aux entreprises des secteurs de
+                    l'Agro-Industrie et de la Maintenance Industrielle. Nos
+                    formations sont conçues pour renforcer les compétences
+                    techniques et managériales des travailleurs en activité,
+                    favorisant ainsi leur évolution professionnelle et
+                    l'amélioration de leur productivité. Dispensées par des
+                    formateurs expérimentés et dans des installations modernes,
+                    nos programmes répondent aux besoins spécifiques du milieu
+                    productif ivoirien tout en intégrant les innovations
+                    technologiques les plus récentes.
                   </p>
-                  <div className="flex justify-center">
+                  <div className="flex justify-start">
                     <div
                       onClick={() =>
                         (window.location.href = "/formation/formation-continue")
@@ -419,10 +418,10 @@ export const Desktop = (): JSX.Element => {
                 <h3 className="font-medium text-[#e2df73] text-xl mb-4">
                   NOUS CONTACTER
                 </h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <MapPinIcon className="w-5 h-5 text-[#e2df73] mt-1" />
-                    <p className="font-medium text-white text-xm">
+                <div className="space-y-4 ">
+                  <div className="flex items-start gap-3 text-white text-xm ">
+                    <MapPinIcon className="w-5 h-5 text-[#e2df73] mt-1 " />
+                    <p className="font-medium  ">
                       YOPOUGON BANCO II, <br />
                       CARREFOUR LYCEE
                     </p>

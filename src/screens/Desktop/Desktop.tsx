@@ -168,7 +168,7 @@ export const Desktop = (): JSX.Element => {
               </h2>
               <Card className="bg-[#1a3a76] rounded-lg ">
                 <CardContent className="p-6">
-                  <p className="font-normal text-white text-xl leading-relaxed mb-4 pl-4">
+                  <p  className="font-normal text-white text-xl leading-relaxed mb-4 pl-4">
                     Le Lycée Professionnel Sectoriel (LPS) de Yopougon est une
                     institution éducative située à Yopougon, une commune
                     d'Abidjan en Côte d'Ivoire.
@@ -325,21 +325,22 @@ export const Desktop = (): JSX.Element => {
 
         {/* Partners Section bg-[#eee8d5]*/}
         <div className="w-full bg-slate-100 py-8 flex justify-around items-center">
-          <img
-            className="h-[110px] object-contain"
-            alt="Partner 1"
-            src="/unnamed.png"
-          />
-          <img
+        <img
             className="h-[110px] object-contain"
             alt="Partner 2"
-            src="/images1.png"
+            src="/unnamed.png"
           />
           <img
             className="h-[100px] object-contain"
             alt="Partner 3"
             src="/la-delegation-de-lunion-europeenne-ue-recrute-pour-ces-2-postes-.png"
           />
+          <img
+            className="h-[110px] object-contain"
+            alt="Partner 1"
+            src="/images1.png"
+          />
+          
         </div>
 
         {/* Footer */}

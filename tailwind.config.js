@@ -51,10 +51,12 @@ module.exports = {
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
+          // "Roboto",
           '"Apple Color Emoji"',
           '"Segoe UI Emoji"',
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
+          
         ],
       },
       keyframes: {

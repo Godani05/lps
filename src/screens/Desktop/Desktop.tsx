@@ -172,7 +172,7 @@ export const Desktop = (): JSX.Element => {
               </h2>
               <Card className="bg-[#1a3a76] rounded-lg ">
                 <CardContent className="p-6">
-                  <p className="font-normal text-white text-xl leading-relaxed mb-4 pl-4">
+                  <p className="font-normal text-white text-xl leading-relaxed mb-4 pl-4 text-justify">
                     Le Lycée Professionnel Sectoriel (LPS) de Yopougon est une
                     institution éducative située à Yopougon, une commune
                     d'Abidjan en Côte d'Ivoire.
@@ -274,7 +274,7 @@ export const Desktop = (): JSX.Element => {
                       </div>
                     </div>
                   </div>
-                  <p className="font-normal text-[#1a3a76] text-lg mt-4">
+                  <p className="font-normal text-[#1a3a76] text-lg mt-4 text-justify">
                     {filiere.description}
                   </p>
                 </div>
@@ -292,7 +292,7 @@ export const Desktop = (): JSX.Element => {
                   src="/form-continue.jpg"
                 />
                 <CardContent className="w-1/2 p-6">
-                  <p className="font-normal text-[#1a3a76] text-lg  mb-4">
+                  <p className="font-normal text-[#1a3a76] text-lg text-justify mb-4">
                     Le Lycée Professionnel Sectoriel de Yopougon propose des
                     programmes de formation continue adaptés aux professionnels
                     et aux entreprises des secteurs de l'Agro-Industrie et de la
@@ -349,7 +349,7 @@ export const Desktop = (): JSX.Element => {
                 src="/Image5.png"
               />
             </div>
-            <p className="font-normal text-[#1a3a76] text-lg mt-6">
+            <p className="font-normal text-[#1a3a76] text-lg mt-6 text-justify">
               Au Lycée Professionnel Sectoriel de Yopougon, les apprenants
               bénéficient d'une formation approfondie en transformation
               alimentaire et en fabrication de produits cosmétiques.
@@ -516,8 +516,8 @@ export const Desktop = (): JSX.Element => {
                 <h3 className="flex font-medium text-[#e2df73] text-xl mb-4  items-center ">
                   LE LYCEE
                 </h3>
-                <div className="flex flex-row gap-6 pb-6 m-2 ">
-                  <p className=" h-60 w-1/2 font-medium text-white text-xm leading-relaxed">
+                <div className="flex flex-row gap-6 pb-6 m-2  ">
+                  <p className=" h-60 w-1/2 font-medium text-white text-xm leading-relaxed ">
                     1 bloc administratif <br />
                     3 bâtiments de 9 salles de classe <br />
                     1 bailment de 4 salles spécialisées <br />

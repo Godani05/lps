@@ -167,7 +167,7 @@ export const Desktop = (): JSX.Element => {
               />
             </div>
             <div className="w-3/5 pt-10 ml-[475px]">
-              <h2 className="font-semibold text-[#1a3a76] text-4xl mb-6 pl-20">
+              <h2 className="font-semibold text-[#1a3a76] text-4xl mb-4 pl-10">
                 QUI SOMMES NOUS ?
               </h2>
               <Card className="bg-[#1a3a76] rounded-lg ">

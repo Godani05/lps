@@ -69,13 +69,13 @@ export const Desktop = (): JSX.Element => {
   const filieres = [
     {
       name: "Maintenance Industrielle",
-      image: "/Image3.jpg",
+      image: "/M_I.jpg",
       description:
         "Former des techniciens pour assurer la maintenance des équipements de production industrielle",
     },
     {
       name: "Agro-Industrie",
-      image: "/agro-industrie.png",
+      image: "/M_A_I.jpg",
       description:
         "Préparer les élèves aux métiers de la transformation alimentaire et cosmétique, avec des compétences théoriques et pratiques dans les procédés de production et des gestions de la qualité",
     },

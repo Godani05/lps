@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "../../components/ui/card";
 import CustomNavigationMenu from "../../components/ui/navigation-menu";
+import ImageSlider from "../../components/ui/ImageSlider";
 
 export const Desktop = (): JSX.Element => {
   // Navigation menu items
@@ -21,7 +22,7 @@ export const Desktop = (): JSX.Element => {
         // { name: "Vie Scolaire", url: "/vie-scolaire" },
 
         "Présentation",
-        "Mot du Proviseur",
+        "Mot du Directeur",
         "Organisation",
         "Vie Scolaire",
       ],
@@ -77,6 +78,22 @@ export const Desktop = (): JSX.Element => {
       image: "/agro-industrie.png",
       description:
         "Préparer les élèves aux métiers de la transformation alimentaire et cosmétique, avec des compétences théoriques et pratiques dans les procédés de production et des gestions de la qualité",
+    },
+  ];
+
+  // Nos produits
+  const products = [
+    {
+      alt:'products',
+      src: "/product1.png",
+    },
+    {
+      alt: 'thon',
+      src: "/product2.png",
+    },
+    {
+      alt: 'confiture',
+      src: "/product3.png",
     },
   ];
 
@@ -327,7 +344,7 @@ export const Desktop = (): JSX.Element => {
           <h2 className="font-semibold text-[#1a3a76] text-3xl mb-6">
             NOS PRODUITS
           </h2>
-          <div className="w-full">
+          {/* <div className="w-full">
             <div
               onClick={() => (window.location.href = "")}
               className="flex flex-row gap-6"
@@ -335,17 +352,17 @@ export const Desktop = (): JSX.Element => {
               <img
                 className="w-1/3 h-64 object-cover rounded-lg"
                 alt="Products"
-                src="/Image7.png"
+                src="/product1.png"
               />
               <img
                 className="w-1/3 h-64 object-cover rounded-lg"
                 alt="Products"
-                src="/Image4.png"
+                src="/product2.png"
               />
               <img
                 className="w-1/3 h-64 object-cover rounded-lg"
                 alt="Products"
-                src="/Image5.png"
+                src="/product3.png"
               />
             </div>
             <p className="font-normal text-[#1a3a76] text-lg mt-6 text-justify">
@@ -364,6 +381,10 @@ export const Desktop = (): JSX.Element => {
               bonnes pratiques d'hygiène et de sécurité, et les bonnes pratiques
               de production.
             </p>
+          </div> */}
+          <div>
+            {/* Utilisation de base */}
+            <ImageSlider products={products} />
           </div>
         </div>
 

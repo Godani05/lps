@@ -17,7 +17,7 @@
 //       hasDropdown: true,
 //       submenu: [
 //         "Présentation",
-//         "Mot du Proviseur",
+//         "Mot du Directeur",
 //         "Organisation",
 //         "Vie Scolaire",
 //       ],

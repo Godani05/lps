@@ -1,10 +1,5 @@
 import React, { useState, useRef } from "react";
 import { ChevronDownIcon } from "lucide-react";
-// import { useNavigate } from 'react-router-dom'; // Si vous utilisez React Router
-// Définition des types
-// interface SubmenuItem {
-//   label: string;
-// }
 
 interface NavItem {
   label: string;
@@ -58,7 +53,7 @@ const CustomNavigationMenu: React.FC<CustomNavigationMenuProps> = ({
                 />
               </button>
               {hoveredIndex === index && (
-                <div 
+                <div
                   className="absolute top-full left-0 mt-2 w-[210px] bg-white rounded-md shadow-lg z-50"
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
@@ -89,3 +84,101 @@ const CustomNavigationMenu: React.FC<CustomNavigationMenuProps> = ({
 
 export default CustomNavigationMenu;
 
+
+// import React, { useState, useRef } from "react";
+// import { ChevronDownIcon } from "lucide-react";
+// import { Link } from "react-router-dom"; // Importer Link
+
+// // Types
+// interface SubmenuItem {
+//   label: string;
+//   url: string;
+// }
+
+// interface NavItem {
+//   label: string;
+//   url?: string; // facultatif si c’est un menu déroulant
+//   hasDropdown: boolean;
+//   submenu?: SubmenuItem[];
+// }
+
+// interface CustomNavigationMenuProps {
+//   navItems: NavItem[];
+// }
+
+// // Composant
+// const CustomNavigationMenu: React.FC<CustomNavigationMenuProps> = ({
+//   navItems,
+// }) => {
+//   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+//   const timeoutRef = useRef<number | null>(null);
+
+//   const handleMouseEnter = (index: number) => {
+//     if (timeoutRef.current) {
+//       clearTimeout(timeoutRef.current);
+//       timeoutRef.current = null;
+//     }
+//     setHoveredIndex(index);
+//   };
+
+//   const handleMouseLeave = () => {
+//     timeoutRef.current = window.setTimeout(() => {
+//       setHoveredIndex(null);
+//     }, 100);
+//   };
+
+//   return (
+//     <div className="flex gap-8 mr-28">
+//       {navItems.map((item, index) => (
+//         <div
+//           key={index}
+//           className="relative"
+//           onMouseEnter={() => handleMouseEnter(index)}
+//           onMouseLeave={handleMouseLeave}
+//         >
+//           {item.hasDropdown ? (
+//             <>
+//               <button className="font-bold text-[#1a3a76] text-[15px] bg-transparent hover:text-[#e2df73] flex items-center">
+//                 {item.label}
+//                 <ChevronDownIcon
+//                   className={`w-6 h-6 ml-1 transition-transform ${
+//                     hoveredIndex === index ? "rotate-180" : ""
+//                   }`}
+//                 />
+//               </button>
+//               {hoveredIndex === index && (
+//                 <div
+//                   className="absolute top-full left-0 mt-2 w-[210px] bg-white rounded-md shadow-lg z-50"
+//                   onMouseEnter={() => handleMouseEnter(index)}
+//                   onMouseLeave={handleMouseLeave}
+//                 >
+//                   <ul className="py-2">
+//                     {item.submenu?.map((subItem, subIndex) => (
+//                       <li key={subIndex}>
+//                         <Link
+//                           to={subItem.url}
+//                           className="block px-4 py-2 text-[#1a3a76] text-sm hover:bg-[#e2df73] hover:text-white transition-colors"
+//                         >
+//                           {subItem.label}
+//                         </Link>
+//                       </li>
+//                     ))}
+//                   </ul>
+//                 </div>
+//               )}
+//             </>
+//           ) : (
+//             <Link
+//               to={item.url || "#"}
+//               className="font-bold text-[#1a3a76] text-[15px] hover:text-[#e2df73]"
+//             >
+//               {item.label}
+//             </Link>
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default CustomNavigationMenu;
